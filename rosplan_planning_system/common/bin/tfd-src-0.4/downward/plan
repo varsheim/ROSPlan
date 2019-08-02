@@ -1,0 +1,11 @@
+#! /bin/bash
+
+export PATH=$PATH:`rospack find rosplan_planning_system`/common/bin/tfd-src-0.4/downward/
+
+cd $(dirname $0)
+
+if [ $# != 3 ] ; then
+    echo "Usage: plan <domainFile> <problemFile> <solutionFile>"
+else
+    ./plan.py "y+Y+a+e+r+O+1+C+1+b" $1 $2 $3
+fi
